@@ -69,7 +69,7 @@
 
       var marker = L.marker([row.MapY, row.MapX], {
         opacity: 1
-      }).bindPopup(row.Site_Name);
+      }).bindPopup("<b>" + row.Site_Name + "</b>");
       
       marker.addTo(map);
     }
