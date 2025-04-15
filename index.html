@@ -82,7 +82,7 @@
       var row = data[i];
 
       var marker = L.marker([row.MapY, row.MapX], {
-        opacity: 1
+        icon: blueIcon
       }).bindPopup("<b>" + row.Site_Name + "</b><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip);
       
       marker.addTo(map);
