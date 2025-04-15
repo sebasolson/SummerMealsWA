@@ -36,6 +36,20 @@
     tap: false
   });
 
+  // Set parameters for each icon/marker on the map
+  var MealsIcon = L.Icon.extend({
+    options: {
+      iconSize:    [38,95],
+      iconAnchor:  [22,94],
+      popupAnchor: [-3,-76]
+    }
+  
+  });
+
+  // Create different colored icons
+  var blueIcon = new MealsIcon({iconUrl: 'pencil_blue.png'}),
+      yellowIcon = new MealsIcon({iconUrl: 'pencil.png'});
+
   /* Control panel to display map layers */
   var controlLayers = L.control.layers( null, null, {
     position: "topright",
