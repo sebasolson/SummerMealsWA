@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>leaflet-map-csv</title>
+  <title>Washington State Summer Meals</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -64,11 +64,11 @@
     // Use PapaParse to convert string to array of objects
     var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
-    // For each row in data, create a marker and add it to the map
-    // For each row, columns `Latitude`, `Longitude`, and `Title` are required
+    // For each row in data, create a marker and add it to the map depending on Service_Model
     for (var i in data) {
       var row = data[i];
       
+      //On-Site meals markers created with X, Y coordinates. Corresponding popup with site info.
       if(row.Service_Model == 'Eat On-Site'){
         var marker = L.marker([row.MapY, row.MapX], {
           icon: blueIcon
@@ -76,6 +76,8 @@
       
         marker.addTo(map);
       }
+
+      //To-Go Site markers and popups
       else if(row.Service_Model == 'Meals To Go'){
         var marker = L.marker([row.MapY, row.MapX], {
         icon: yellowIcon
