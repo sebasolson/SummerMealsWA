@@ -39,16 +39,17 @@
   // Set parameters for each icon/marker on the map
   var MealsIcon = L.Icon.extend({
     options: {
-      iconSize:    [38,38],
-      iconAnchor:  [20,37],
-      popupAnchor: [-3,-37]
+      iconSize:    [25,41],
+      iconAnchor:  [12,41],
+      popupAnchor: [1,-34],
+      shadowSize:  [41,41]
     }
   
   });
 
   // Create different colored icons
-  var blueIcon = new MealsIcon({iconUrl: 'pencil_blue.png'}),
-      yellowIcon = new MealsIcon({iconUrl: 'pencil.png'});
+  var blueIcon = new MealsIcon({iconUrl: 'Blue-UWKC-MarkerfromSVG.png',shadowUrl: 'marker-shadow.png'}),
+      yellowIcon = new MealsIcon({iconUrl: 'Orange-UWKC-MarkerfromSVG.png',shadowUrl: 'marker-shadow.png'});
 
 
   // display Carto basemap tiles with light features and labels
