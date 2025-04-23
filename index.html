@@ -72,7 +72,7 @@
       
       //Mealtimes
       var mealtimes = 'Days of Operation: ' + row.Days_of_operation;
-      if(row.Breakfast_Time != ''){
+      if(row.Breakfast_Time != null){
         mealtimes = mealtimes.concat('<br>Breakfast: '+ row.Breakfast_Time);
       }
 
