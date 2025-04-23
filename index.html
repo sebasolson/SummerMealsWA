@@ -75,6 +75,18 @@
       if(row.Breakfast_Time != null){
         mealtimes = mealtimes.concat('<br>Breakfast: '+ row.Breakfast_Time);
       }
+      if(row.Lunch_Time != null){
+        mealtimes = mealtimes.concat('<br>Lunch: '+ row.Lunch_Time);
+      }
+      if(row.Snack_Time_AM != null){
+        mealtimes = mealtimes.concat('<br>Morning Snack: '+ row.Snack_Time_AM);
+      }
+      if(row.Snack_Time_PM != null){
+        mealtimes = mealtimes.concat('<br>Afternoon Snack: '+ row.Snack_Time_PM);
+      }
+      if(row.Supper_Time != null){
+        mealtimes = mealtimes.concat('<br>Dinner: '+ row.Supper_Time);
+      }
 
 
       //On-Site meals markers created with X, Y coordinates. Corresponding popup with site info.
