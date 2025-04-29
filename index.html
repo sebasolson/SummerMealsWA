@@ -37,6 +37,9 @@
     minZoom: 7
   });
 
+  // locate user and set view to their location
+  map.locate({setView: true, maxZoom: 16});
+
   // Set parameters for each icon/marker on the map
   var MealsIcon = L.Icon.extend({
     options: {
