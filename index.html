@@ -38,7 +38,33 @@
   });
 
   // locate user and set view to their location
-  map.locate({setView: true, maxZoom: 16});
+  map.locate({setView: true, maxZoom: 12});
+
+  //Set parameters for size and anchor of user location circle
+  var SelfIcon = L.Icon.extend({
+    options: {
+      iconSize:   [25,25],
+      iconAnchor: [12,12]
+    }
+  });
+  //Add the png for the user location circle
+  var selfCircle = new SelfIcon({iconUrl: 'Self-Marker.png'});
+
+  //Function to create user location circle based on user coordinates
+  function onLocationFound(e) {
+    L.marker(e.latlng, {icon: selfCircle}).addTo(map)
+        .bindPopup("Your location").openPopup();
+  }
+  //Using the location function
+  map.on('locationfound', onLocationFound);
+
+  //Error handling for user location
+  function onLocationError(e){
+    alert(e.message);
+  }
+  map.on('locationerror',onLocationError);
+
+
 
   // Set parameters for each icon/marker on the map
   var MealsIcon = L.Icon.extend({
