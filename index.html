@@ -21,12 +21,15 @@
 
   <!-- Position the map with Cascading Style Sheet (CSS) and add font info -->
   <style>
+    h2 {
+      margin: 0 0 10px 0;
+    }
+    
     .antonio {
       font-family: "Antonio", sans-serif;
       font-optical-sizing: auto;
       font-weight: 700;
       font-style: normal;
-      margin-bottom: auto;
       color: #21296b;
     }
 
@@ -130,7 +133,7 @@
       var row = data[i];
       
       //Mealtimes
-      var mealtimes = "<br>Days of Operation: " + row.Days_of_operation;
+      var mealtimes = "<br><pboldDays of Operation: </pbold>" + row.Days_of_operation;
       if(row.Breakfast_Time != null){
         mealtimes = mealtimes.concat('<br>Breakfast: '+ row.Breakfast_Time);
       }
@@ -152,7 +155,7 @@
       if(row.Service_Model == 'Eat On-Site'){
         var marker = L.marker([row.MapY, row.MapX], {
           icon: blueIcon
-        }).bindPopup("<h2 class='antonio'>" + row.Site_Name + "</h2><br><p><pbold>Address: </pbold>" + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone +  mealtimes +" </p>");
+        }).bindPopup("<h2 class='antonio'>" + row.Site_Name + "</h2><br><p><pbold>Address: </pbold>" + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br><pbold>Phone: </pbold>" + row.Site_Phone +  mealtimes +" </p>");
       
         marker.addTo(map);
       }
@@ -161,7 +164,7 @@
       else if(row.Service_Model == 'Meals To Go'){
         var marker = L.marker([row.MapY, row.MapX], {
         icon: yellowIcon
-        }).bindPopup("<b>" + row.Site_Name + "</b><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone + mealtimes);
+        }).bindPopup("<h2 class='antonio'>" + row.Site_Name + "</h2><br><p><pbold>Address: </pbold>" + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br><pbold>Phone: </pbold>" + row.Site_Phone +  mealtimes +" </p>");
       
         marker.addTo(map);
       }
