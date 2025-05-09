@@ -24,7 +24,7 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  margin-bottom: 2px;
+  margin-bottom: -20px;
   color: #21296b;
   }
 
@@ -136,7 +136,7 @@
       if(row.Service_Model == 'Eat On-Site'){
         var marker = L.marker([row.MapY, row.MapX], {
           icon: blueIcon
-        }).bindPopup("<p class='antonio'>" + row.Site_Name + "</p><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone +  mealtimes);
+        }).bindPopup("<h2 class='antonio'>" + row.Site_Name + "</h2><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone +  mealtimes);
       
         marker.addTo(map);
       }
