@@ -37,7 +37,7 @@
       color: #221e1f
     }
 
-    .palanquin-bold {
+    .pbold {
        font-family: "Palanquin", sans-serif;
        font-weight: 700;
        font-style: normal;
@@ -130,7 +130,7 @@
       var row = data[i];
       
       //Mealtimes
-      var mealtimes = '<br>Days of Operation: ' + row.Days_of_operation;
+      var mealtimes = "<br><p class='pbold'>Days of Operation: </p>" + row.Days_of_operation;
       if(row.Breakfast_Time != null){
         mealtimes = mealtimes.concat('<br>Breakfast: '+ row.Breakfast_Time);
       }
