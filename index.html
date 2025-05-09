@@ -123,7 +123,7 @@
       if(row.Service_Model == 'Eat On-Site'){
         var marker = L.marker([row.MapY, row.MapX], {
           icon: blueIcon
-        }).bindPopup("<b>" + row.Site_Name + "</b><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>" + mealtimes);
+        }).bindPopup("<b>" + row.Site_Name + "</b><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone +  mealtimes);
       
         marker.addTo(map);
       }
@@ -132,7 +132,7 @@
       else if(row.Service_Model == 'Meals To Go'){
         var marker = L.marker([row.MapY, row.MapX], {
         icon: yellowIcon
-        }).bindPopup("<b>" + row.Site_Name + "</b><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>" + mealtimes);
+        }).bindPopup("<b>" + row.Site_Name + "</b><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone + mealtimes);
       
         marker.addTo(map);
       }
