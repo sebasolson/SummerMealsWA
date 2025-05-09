@@ -37,13 +37,13 @@
       color: #221e1f
     }
 
-    .pbold {
+    pbold {
        font-family: "Palanquin", sans-serif;
        font-weight: 700;
        font-style: normal;
-       color: #221e1f
+       color: #221e1f;
     }
-    
+
     body { margin:0; padding:0; }
     #map { position: absolute; top:0; bottom:0; right:0; left:0; }
   </style>
@@ -130,7 +130,7 @@
       var row = data[i];
       
       //Mealtimes
-      var mealtimes = "<br><p class='pbold'>Days of Operation: </p>" + row.Days_of_operation;
+      var mealtimes = "<br>Days of Operation: " + row.Days_of_operation;
       if(row.Breakfast_Time != null){
         mealtimes = mealtimes.concat('<br>Breakfast: '+ row.Breakfast_Time);
       }
@@ -152,7 +152,7 @@
       if(row.Service_Model == 'Eat On-Site'){
         var marker = L.marker([row.MapY, row.MapX], {
           icon: blueIcon
-        }).bindPopup("<h2 class='antonio'>" + row.Site_Name + "</h2><br>Address: " + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone +  mealtimes);
+        }).bindPopup("<h2 class='antonio'>" + row.Site_Name + "</h2><br><p><pbold>Address: </pbold>" + row.Site_Address1 + ", " + row.Site_City + ", " + row.Site_State + " " + row.Site_Zip + "<br>Phone: " + row.Site_Phone +  mealtimes +" </p>");
       
         marker.addTo(map);
       }
