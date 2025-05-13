@@ -13,11 +13,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
 
-  <!-- Load UWKC Fonts from Google Fonts -->
+  <!-- Load Fonts from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Load Leaflet-Geosearch (The Address search part) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
+  <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
 
   <!-- Position the map with Cascading Style Sheet (CSS) and add font info -->
   <style>
@@ -175,6 +179,13 @@
   map.attributionControl.setPrefix(
     'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
   );
+
+  //Adding Search Bar
+  const search = new GeoSearch.GeoSearchControl({
+    provider: new GeoSearch.OpenStreetMapProvider(),
+  });
+
+  map.addControl(search);
 
   </script>
 </body>
