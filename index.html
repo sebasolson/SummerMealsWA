@@ -180,9 +180,15 @@
     'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
   );
 
+  const provider = new OpenStreetMapProvider({
+  params: {
+    countrycodes: 'us'
+  },
+  });
+  
   //Adding Search Bar
   const search = new GeoSearch.GeoSearchControl({
-    provider: new GeoSearch.OpenStreetMapProvider(),
+    provider,
     style: "bar",
     notFoundMessage: "Sorry, that address could not be found"
   });
