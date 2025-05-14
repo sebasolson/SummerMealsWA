@@ -185,7 +185,7 @@
     provider: new GeoSearch.OpenStreetMapProvider(),
     style: "bar",
     notFoundMessage: "Sorry, that address could not be found",
-    marker: selfCircle
+    marker: {icon: selfCircle}
   });
 
   map.addControl(search);
