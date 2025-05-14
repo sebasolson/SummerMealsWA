@@ -183,6 +183,8 @@
   //Adding Search Bar
   const search = new GeoSearch.GeoSearchControl({
     provider: new GeoSearch.OpenStreetMapProvider(),
+    style: "bar",
+    notFoundMessage: "Sorry, that address could not be found"
   });
 
   map.addControl(search);
