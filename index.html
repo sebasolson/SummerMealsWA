@@ -115,8 +115,9 @@
   });
 
   // Create different colored icons
-  var blueIcon = new MealsIcon({iconUrl: 'Markers/Blue-UWKC-MarkerfromSVG.png',shadowUrl: 'Markers/marker-shadow.png'}),
-      yellowIcon = new MealsIcon({iconUrl: 'Markers/Orange-UWKC-MarkerfromSVG.png',shadowUrl: 'Markers/marker-shadow.png'});
+  var blueIcon = new MealsIcon({iconUrl: 'Markers/Blue-SunBucks-Marker.png',shadowUrl: 'Markers/marker-shadow.png'}),
+      yellowIcon = new MealsIcon({iconUrl: 'Markers/Orange-SunBucks-Marker.png',shadowUrl: 'Markers/marker-shadow.png'}),
+      redPin = new MealsIcon({iconUrl: 'Markers/RedPin.png',shadowUrl: 'Markers/marker-shadow.png'});
 
 
   // display Carto basemap tiles with light features and labels
@@ -185,7 +186,7 @@
     provider: new GeoSearch.OpenStreetMapProvider(),
     style: "bar",
     notFoundMessage: "Sorry, that address could not be found",
-    marker: {icon: selfCircle},
+    marker: {icon: redPin},
     resetButton: 'clear search',
     retainZoomLevel: true
   });
