@@ -92,7 +92,7 @@
   //Function to create user location circle based on user coordinates
   function onLocationFound(e) {
     L.marker(e.latlng, {icon: selfCircle}).addTo(map)
-        .bindPopup("Your location").openPopup();
+        .bindPopup("<b>Your location</b>");
   }
   //Using the location function
   map.on('locationfound', onLocationFound);
@@ -190,7 +190,7 @@
     notFoundMessage: "Sorry, that address could not be found",
     marker: {icon: redPin},
     resetButton: 'clear search',
-    retainZoomLevel: true
+    zoomLevel: 15
   });
 
   map.addControl(search);
