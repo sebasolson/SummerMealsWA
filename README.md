@@ -4,7 +4,7 @@ Leaflet map displaying all Summer Meals sites for Hunger Free WA
 ![Screenshot of map](leaflet-map-csv.png)
 
 ## Instructions
-# Updating Site Info
+### Updating Site Info
 To update site info, find the "Add file" button in the repository and click "Upload file". 
 
 ![Screenshot of repository](UpdateSiteInfo.png)
